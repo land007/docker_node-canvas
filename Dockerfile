@@ -2,7 +2,8 @@ FROM land007/node:latest
 
 MAINTAINER Yiqiu Jia <yiqiujia@hotmail.com>
 
-RUN apt-get install -y libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++ python
+#RUN apt-get update && apt-get install -y libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++ python && apt-get clean
+RUN apt-get update && apt-get install -y libcairo2-dev libjpeg-dev libpango1.0-dev libgif-dev build-essential g++ && apt-get clean
 RUN . $HOME/.nvm/nvm.sh && npm install canvas
 
 
